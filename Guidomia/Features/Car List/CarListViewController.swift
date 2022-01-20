@@ -9,6 +9,8 @@ import UIKit
 
 class CarListViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -16,7 +18,28 @@ class CarListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = Colors.orange
-        navigationController?.navigationBar.barStyle = .black
+        // Setup view
+        self.title = NSLocalizedString("App.Name", comment: "")
+        self.navigationController?.navigationBar.barTintColor = Colors.orange
+        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        
+        // Setup tableView
+        self.tableView.register(cell: CarListHeaderTableViewCell.self)
+        self.tableView.rowHeight = UITableView.automaticDimension
+    }
+}
+
+extension CarListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let headerCell = self.tableView.dequeue(cell: CarListHeaderTableViewCell.self, for: indexPath)
+        headerCell.configure(item: .init(backgroundImage: UIImage(named: "Tacoma")!, title: "Tacoma 2021", subtitle: "Get yours now"))
+        return headerCell
     }
 }
