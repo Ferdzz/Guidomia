@@ -7,3 +7,5 @@
 */
 
 "App.Name" = "Guidomia";
+
+"Error.CannotLoadCars" = "We were not able to load the list of cars. Please try again later.";

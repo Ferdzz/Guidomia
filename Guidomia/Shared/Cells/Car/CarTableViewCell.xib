@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-3Y-u20">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="228"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tacoma" translatesAutoresizingMaskIntoConstraints="NO" id="bNG-Bw-zDP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bNG-Bw-zDP">
                                         <rect key="frame" x="18" y="18" width="129" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="fAK-2E-ean"/>
@@ -105,7 +105,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Tacoma" width="5472" height="3648"/>
         <namedColor name="Light Gray">
             <color red="0.83499997854232788" green="0.83499997854232788" blue="0.83499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

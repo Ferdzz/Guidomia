@@ -19,10 +19,27 @@
 		7D1E3190279A1F50007D80C1 /* CarListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1E318E279A1F4F007D80C1 /* CarListHeaderTableViewCell.xib */; };
 		7D1E3193279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E3192279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift */; };
 		7D1E3195279A21D1007D80C1 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E3194279A21D1007D80C1 /* UITableView+Extensions.swift */; };
+		7DA6D957279B398B003C0138 /* CarsLocalManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D956279B398B003C0138 /* CarsLocalManagerTests.swift */; };
+		7DA6D959279B3B02003C0138 /* CarsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D958279B3B02003C0138 /* CarsManagerProtocol.swift */; };
 		7DCCDBEB279B23AF00BF6711 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */; };
 		7DCCDBEC279B23AF00BF6711 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */; };
 		7DCCDBEF279B26A100BF6711 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 7DCCDBEE279B26A100BF6711 /* Cosmos */; };
+		7DCCDBF2279B30F300BF6711 /* CarsLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBF1279B30F300BF6711 /* CarsLocalManager.swift */; };
+		7DCCDBF7279B312900BF6711 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBF6279B312900BF6711 /* Car.swift */; };
+		7DCCDBFA279B32C700BF6711 /* CarsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBF9279B32C700BF6711 /* CarsStore.swift */; };
+		7DCCDBFC279B32DE00BF6711 /* CarsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBFB279B32DE00BF6711 /* CarsApiManager.swift */; };
+		7DCCDC0C279B378000BF6711 /* GuidomiaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDC0B279B378000BF6711 /* GuidomiaError.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DCCDC05279B334C00BF6711 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D1E3154279A0537007D80C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D1E315B279A0537007D80C1;
+			remoteInfo = Guidomia;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7D1E315C279A0537007D80C1 /* Guidomia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,8 +57,16 @@
 		7D1E318E279A1F4F007D80C1 /* CarListHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarListHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		7D1E3192279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		7D1E3194279A21D1007D80C1 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		7DA6D956279B398B003C0138 /* CarsLocalManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsLocalManagerTests.swift; sourceTree = "<group>"; };
+		7DA6D958279B3B02003C0138 /* CarsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsManagerProtocol.swift; sourceTree = "<group>"; };
 		7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
+		7DCCDBF1279B30F300BF6711 /* CarsLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsLocalManager.swift; sourceTree = "<group>"; };
+		7DCCDBF6279B312900BF6711 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		7DCCDBF9279B32C700BF6711 /* CarsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsStore.swift; sourceTree = "<group>"; };
+		7DCCDBFB279B32DE00BF6711 /* CarsApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsApiManager.swift; sourceTree = "<group>"; };
+		7DCCDC01279B334C00BF6711 /* GuidomiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuidomiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCCDC0B279B378000BF6711 /* GuidomiaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DCCDBFE279B334C00BF6711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				7D1E315E279A0537007D80C1 /* Guidomia */,
+				7DCCDC02279B334C00BF6711 /* GuidomiaTests */,
 				7D1E315D279A0537007D80C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				7D1E315C279A0537007D80C1 /* Guidomia.app */,
+				7DCCDC01279B334C00BF6711 /* GuidomiaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +112,7 @@
 				7D1E3173279A06F4007D80C1 /* Supporting Files */,
 				7D1E3174279A0703007D80C1 /* Features */,
 				7D1E317C279A10B0007D80C1 /* Shared */,
+				7DCCDBF0279B30D700BF6711 /* Networking */,
 				7D1E315F279A0537007D80C1 /* AppDelegate.swift */,
 			);
 			path = Guidomia;
@@ -115,6 +150,7 @@
 		7D1E317C279A10B0007D80C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7DCCDC0A279B377200BF6711 /* Errors */,
 				7D1E318B279A1F2F007D80C1 /* Cells */,
 				7D1E3191279A2181007D80C1 /* Extensions */,
 				7D1E317D279A10F4007D80C1 /* Colors.swift */,
@@ -158,6 +194,58 @@
 			path = Car;
 			sourceTree = "<group>";
 		};
+		7DCCDBF0279B30D700BF6711 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7DCCDBF4279B311500BF6711 /* Models */,
+				7DCCDBF3279B310E00BF6711 /* Managers */,
+				7DCCDBF8279B324300BF6711 /* Stores */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7DCCDBF3279B310E00BF6711 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7DA6D958279B3B02003C0138 /* CarsManagerProtocol.swift */,
+				7DCCDBF1279B30F300BF6711 /* CarsLocalManager.swift */,
+				7DCCDBFB279B32DE00BF6711 /* CarsApiManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7DCCDBF4279B311500BF6711 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DCCDBF6279B312900BF6711 /* Car.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7DCCDBF8279B324300BF6711 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				7DCCDBF9279B32C700BF6711 /* CarsStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		7DCCDC02279B334C00BF6711 /* GuidomiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DA6D956279B398B003C0138 /* CarsLocalManagerTests.swift */,
+			);
+			path = GuidomiaTests;
+			sourceTree = "<group>";
+		};
+		7DCCDC0A279B377200BF6711 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				7DCCDC0B279B378000BF6711 /* GuidomiaError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +269,24 @@
 			productReference = 7D1E315C279A0537007D80C1 /* Guidomia.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7DCCDC00279B334C00BF6711 /* GuidomiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCCDC07279B334C00BF6711 /* Build configuration list for PBXNativeTarget "GuidomiaTests" */;
+			buildPhases = (
+				7DCCDBFD279B334C00BF6711 /* Sources */,
+				7DCCDBFE279B334C00BF6711 /* Frameworks */,
+				7DCCDBFF279B334C00BF6711 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DCCDC06279B334C00BF6711 /* PBXTargetDependency */,
+			);
+			name = GuidomiaTests;
+			productName = GuidomiaTests;
+			productReference = 7DCCDC01279B334C00BF6711 /* GuidomiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +299,10 @@
 				TargetAttributes = {
 					7D1E315B279A0537007D80C1 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					7DCCDC00279B334C00BF6711 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 7D1E315B279A0537007D80C1;
 					};
 				};
 			};
@@ -213,6 +323,7 @@
 			projectRoot = "";
 			targets = (
 				7D1E315B279A0537007D80C1 /* Guidomia */,
+				7DCCDC00279B334C00BF6711 /* GuidomiaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +343,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DCCDBFF279B334C00BF6711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -240,16 +358,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1E3193279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
+				7DA6D959279B3B02003C0138 /* CarsManagerProtocol.swift in Sources */,
+				7DCCDBF2279B30F300BF6711 /* CarsLocalManager.swift in Sources */,
 				7DCCDBEB279B23AF00BF6711 /* CarTableViewCell.swift in Sources */,
 				7D1E3160279A0537007D80C1 /* AppDelegate.swift in Sources */,
 				7D1E317A279A080C007D80C1 /* CarListViewController.swift in Sources */,
+				7DCCDBFC279B32DE00BF6711 /* CarsApiManager.swift in Sources */,
+				7DCCDC0C279B378000BF6711 /* GuidomiaError.swift in Sources */,
+				7DCCDBF7279B312900BF6711 /* Car.swift in Sources */,
 				7D1E3195279A21D1007D80C1 /* UITableView+Extensions.swift in Sources */,
 				7D1E318F279A1F50007D80C1 /* CarListHeaderTableViewCell.swift in Sources */,
+				7DCCDBFA279B32C700BF6711 /* CarsStore.swift in Sources */,
 				7D1E317E279A10F4007D80C1 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DCCDBFD279B334C00BF6711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA6D957279B398B003C0138 /* CarsLocalManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DCCDC06279B334C00BF6711 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D1E315B279A0537007D80C1 /* Guidomia */;
+			targetProxy = 7DCCDC05279B334C00BF6711 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7D1E3185279A1C1A007D80C1 /* Localizable.strings */ = {
@@ -440,6 +580,44 @@
 			};
 			name = Release;
 		};
+		7DCCDC08279B334C00BF6711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N4B67XD85Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.randstad.demo.GuidomiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guidomia.app/Guidomia";
+			};
+			name = Debug;
+		};
+		7DCCDC09279B334C00BF6711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N4B67XD85Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.randstad.demo.GuidomiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guidomia.app/Guidomia";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -457,6 +635,15 @@
 			buildConfigurations = (
 				7D1E3171279A0538007D80C1 /* Debug */,
 				7D1E3172279A0538007D80C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCCDC07279B334C00BF6711 /* Build configuration list for PBXNativeTarget "GuidomiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCCDC08279B334C00BF6711 /* Debug */,
+				7DCCDC09279B334C00BF6711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
