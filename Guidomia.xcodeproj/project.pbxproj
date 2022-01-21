@@ -21,6 +21,15 @@
 		7D1E3195279A21D1007D80C1 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E3194279A21D1007D80C1 /* UITableView+Extensions.swift */; };
 		7DA6D957279B398B003C0138 /* CarsLocalManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D956279B398B003C0138 /* CarsLocalManagerTests.swift */; };
 		7DA6D959279B3B02003C0138 /* CarsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D958279B3B02003C0138 /* CarsManagerProtocol.swift */; };
+		7DA6D960279B5739003C0138 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D95F279B5739003C0138 /* Section.swift */; };
+		7DA6D964279B5831003C0138 /* CarListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D963279B5831003C0138 /* CarListRow.swift */; };
+		7DA6D966279B5BB7003C0138 /* CarListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D965279B5BB7003C0138 /* CarListInteractor.swift */; };
+		7DA6D96D279B6A54003C0138 /* BMW_330i.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D968279B6A54003C0138 /* BMW_330i.jpg */; };
+		7DA6D96E279B6A54003C0138 /* Mercedez_benz_GLC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D969279B6A54003C0138 /* Mercedez_benz_GLC.jpg */; };
+		7DA6D96F279B6A54003C0138 /* Range_Rover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D96A279B6A54003C0138 /* Range_Rover.jpg */; };
+		7DA6D970279B6A54003C0138 /* Alpine_roadster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D96B279B6A54003C0138 /* Alpine_roadster.jpg */; };
+		7DA6D974279B6C02003C0138 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7DA6D973279B6C02003C0138 /* Kingfisher */; };
+		7DA6D976279B6E8C003C0138 /* Tacoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D975279B6E8C003C0138 /* Tacoma.jpg */; };
 		7DCCDBEB279B23AF00BF6711 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */; };
 		7DCCDBEC279B23AF00BF6711 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */; };
 		7DCCDBEF279B26A100BF6711 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 7DCCDBEE279B26A100BF6711 /* Cosmos */; };
@@ -59,6 +68,14 @@
 		7D1E3194279A21D1007D80C1 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		7DA6D956279B398B003C0138 /* CarsLocalManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsLocalManagerTests.swift; sourceTree = "<group>"; };
 		7DA6D958279B3B02003C0138 /* CarsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsManagerProtocol.swift; sourceTree = "<group>"; };
+		7DA6D95F279B5739003C0138 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		7DA6D963279B5831003C0138 /* CarListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListRow.swift; sourceTree = "<group>"; };
+		7DA6D965279B5BB7003C0138 /* CarListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListInteractor.swift; sourceTree = "<group>"; };
+		7DA6D968279B6A54003C0138 /* BMW_330i.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_330i.jpg; sourceTree = "<group>"; };
+		7DA6D969279B6A54003C0138 /* Mercedez_benz_GLC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercedez_benz_GLC.jpg; sourceTree = "<group>"; };
+		7DA6D96A279B6A54003C0138 /* Range_Rover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Range_Rover.jpg; sourceTree = "<group>"; };
+		7DA6D96B279B6A54003C0138 /* Alpine_roadster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alpine_roadster.jpg; sourceTree = "<group>"; };
+		7DA6D975279B6E8C003C0138 /* Tacoma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tacoma.jpg; sourceTree = "<group>"; };
 		7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		7DCCDBF1279B30F300BF6711 /* CarsLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsLocalManager.swift; sourceTree = "<group>"; };
@@ -74,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA6D974279B6C02003C0138 /* Kingfisher in Frameworks */,
 				7DCCDBEF279B26A100BF6711 /* Cosmos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +127,7 @@
 		7D1E315E279A0537007D80C1 /* Guidomia */ = {
 			isa = PBXGroup;
 			children = (
+				7DA6D967279B6A44003C0138 /* Data */,
 				7D1E3173279A06F4007D80C1 /* Supporting Files */,
 				7D1E3174279A0703007D80C1 /* Features */,
 				7D1E317C279A10B0007D80C1 /* Shared */,
@@ -124,7 +143,6 @@
 				7D1E316D279A0538007D80C1 /* Info.plist */,
 				7D1E3168279A0538007D80C1 /* Assets.xcassets */,
 				7D1E3187279A1C8C007D80C1 /* LaunchScreen.storyboard */,
-				7D1E3189279A1E6C007D80C1 /* car_list.json */,
 				7D1E3185279A1C1A007D80C1 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
@@ -141,7 +159,9 @@
 		7D1E3175279A075F007D80C1 /* Car List */ = {
 			isa = PBXGroup;
 			children = (
+				7DA6D963279B5831003C0138 /* CarListRow.swift */,
 				7D1E3178279A080C007D80C1 /* CarListViewController.swift */,
+				7DA6D965279B5BB7003C0138 /* CarListInteractor.swift */,
 				7D1E3179279A080C007D80C1 /* CarListViewController.xib */,
 			);
 			path = "Car List";
@@ -150,10 +170,11 @@
 		7D1E317C279A10B0007D80C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7DCCDC0A279B377200BF6711 /* Errors */,
-				7D1E318B279A1F2F007D80C1 /* Cells */,
-				7D1E3191279A2181007D80C1 /* Extensions */,
 				7D1E317D279A10F4007D80C1 /* Colors.swift */,
+				7D1E318B279A1F2F007D80C1 /* Cells */,
+				7DCCDC0A279B377200BF6711 /* Errors */,
+				7D1E3191279A2181007D80C1 /* Extensions */,
+				7DA6D95A279B559E003C0138 /* TableView */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -179,10 +200,31 @@
 		7D1E3191279A2181007D80C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7D1E3192279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift */,
 				7D1E3194279A21D1007D80C1 /* UITableView+Extensions.swift */,
+				7D1E3192279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DA6D95A279B559E003C0138 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				7DA6D95F279B5739003C0138 /* Section.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		7DA6D967279B6A44003C0138 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7D1E3189279A1E6C007D80C1 /* car_list.json */,
+				7DA6D96B279B6A54003C0138 /* Alpine_roadster.jpg */,
+				7DA6D968279B6A54003C0138 /* BMW_330i.jpg */,
+				7DA6D969279B6A54003C0138 /* Mercedez_benz_GLC.jpg */,
+				7DA6D96A279B6A54003C0138 /* Range_Rover.jpg */,
+				7DA6D975279B6E8C003C0138 /* Tacoma.jpg */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		7DCCDBE8279B23A100BF6711 /* Car */ = {
@@ -264,6 +306,7 @@
 			name = Guidomia;
 			packageProductDependencies = (
 				7DCCDBEE279B26A100BF6711 /* Cosmos */,
+				7DA6D973279B6C02003C0138 /* Kingfisher */,
 			);
 			productName = Guidomia;
 			productReference = 7D1E315C279A0537007D80C1 /* Guidomia.app */;
@@ -317,6 +360,7 @@
 			mainGroup = 7D1E3153279A0537007D80C1;
 			packageReferences = (
 				7DCCDBED279B26A100BF6711 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				7DA6D972279B6C02003C0138 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 7D1E315D279A0537007D80C1 /* Products */;
 			projectDirPath = "";
@@ -334,12 +378,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1E3183279A1C1A007D80C1 /* Localizable.strings in Resources */,
+				7DA6D970279B6A54003C0138 /* Alpine_roadster.jpg in Resources */,
 				7DCCDBEC279B23AF00BF6711 /* CarTableViewCell.xib in Resources */,
 				7D1E3188279A1C8C007D80C1 /* LaunchScreen.storyboard in Resources */,
 				7D1E3169279A0538007D80C1 /* Assets.xcassets in Resources */,
 				7D1E3190279A1F50007D80C1 /* CarListHeaderTableViewCell.xib in Resources */,
 				7D1E317B279A080C007D80C1 /* CarListViewController.xib in Resources */,
 				7D1E318A279A1E6C007D80C1 /* car_list.json in Resources */,
+				7DA6D976279B6E8C003C0138 /* Tacoma.jpg in Resources */,
+				7DA6D96D279B6A54003C0138 /* BMW_330i.jpg in Resources */,
+				7DA6D96F279B6A54003C0138 /* Range_Rover.jpg in Resources */,
+				7DA6D96E279B6A54003C0138 /* Mercedez_benz_GLC.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +411,7 @@
 				7DCCDBF2279B30F300BF6711 /* CarsLocalManager.swift in Sources */,
 				7DCCDBEB279B23AF00BF6711 /* CarTableViewCell.swift in Sources */,
 				7D1E3160279A0537007D80C1 /* AppDelegate.swift in Sources */,
+				7DA6D964279B5831003C0138 /* CarListRow.swift in Sources */,
 				7D1E317A279A080C007D80C1 /* CarListViewController.swift in Sources */,
 				7DCCDBFC279B32DE00BF6711 /* CarsApiManager.swift in Sources */,
 				7DCCDC0C279B378000BF6711 /* GuidomiaError.swift in Sources */,
@@ -369,7 +419,9 @@
 				7D1E3195279A21D1007D80C1 /* UITableView+Extensions.swift in Sources */,
 				7D1E318F279A1F50007D80C1 /* CarListHeaderTableViewCell.swift in Sources */,
 				7DCCDBFA279B32C700BF6711 /* CarsStore.swift in Sources */,
+				7DA6D960279B5739003C0138 /* Section.swift in Sources */,
 				7D1E317E279A10F4007D80C1 /* Colors.swift in Sources */,
+				7DA6D966279B5BB7003C0138 /* CarListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +703,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7DA6D972279B6C02003C0138 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.1.2;
+			};
+		};
 		7DCCDBED279B26A100BF6711 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
@@ -662,6 +722,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7DA6D973279B6C02003C0138 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DA6D972279B6C02003C0138 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		7DCCDBEE279B26A100BF6711 /* Cosmos */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7DCCDBED279B26A100BF6711 /* XCRemoteSwiftPackageReference "Cosmos" */;

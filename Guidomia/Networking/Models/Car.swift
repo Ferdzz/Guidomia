@@ -14,4 +14,5 @@ struct Car: Decodable, Equatable {
     let consList: [String]
     let prosList: [String]
     let rating: Int
+    let image: String
 }
