@@ -19,6 +19,9 @@
 		7D1E3190279A1F50007D80C1 /* CarListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1E318E279A1F4F007D80C1 /* CarListHeaderTableViewCell.xib */; };
 		7D1E3193279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E3192279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift */; };
 		7D1E3195279A21D1007D80C1 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E3194279A21D1007D80C1 /* UITableView+Extensions.swift */; };
+		7DCCDBEB279B23AF00BF6711 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */; };
+		7DCCDBEC279B23AF00BF6711 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */; };
+		7DCCDBEF279B26A100BF6711 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 7DCCDBEE279B26A100BF6711 /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,8 @@
 		7D1E318E279A1F4F007D80C1 /* CarListHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarListHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		7D1E3192279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		7D1E3194279A21D1007D80C1 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCCDBEF279B26A100BF6711 /* Cosmos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +125,7 @@
 		7D1E318B279A1F2F007D80C1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7DCCDBE8279B23A100BF6711 /* Car */,
 				7D1E318C279A1F33007D80C1 /* Car List Header */,
 			);
 			path = Cells;
@@ -142,6 +149,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7DCCDBE8279B23A100BF6711 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */,
+				7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +174,9 @@
 			dependencies = (
 			);
 			name = Guidomia;
+			packageProductDependencies = (
+				7DCCDBEE279B26A100BF6711 /* Cosmos */,
+			);
 			productName = Guidomia;
 			productReference = 7D1E315C279A0537007D80C1 /* Guidomia.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +205,9 @@
 				fr,
 			);
 			mainGroup = 7D1E3153279A0537007D80C1;
+			packageReferences = (
+				7DCCDBED279B26A100BF6711 /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 7D1E315D279A0537007D80C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1E3183279A1C1A007D80C1 /* Localizable.strings in Resources */,
+				7DCCDBEC279B23AF00BF6711 /* CarTableViewCell.xib in Resources */,
 				7D1E3188279A1C8C007D80C1 /* LaunchScreen.storyboard in Resources */,
 				7D1E3169279A0538007D80C1 /* Assets.xcassets in Resources */,
 				7D1E3190279A1F50007D80C1 /* CarListHeaderTableViewCell.xib in Resources */,
@@ -217,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1E3193279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
+				7DCCDBEB279B23AF00BF6711 /* CarTableViewCell.swift in Sources */,
 				7D1E3160279A0537007D80C1 /* AppDelegate.swift in Sources */,
 				7D1E317A279A080C007D80C1 /* CarListViewController.swift in Sources */,
 				7D1E3195279A21D1007D80C1 /* UITableView+Extensions.swift in Sources */,
@@ -438,6 +462,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7DCCDBED279B26A100BF6711 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = exactVersion;
+				version = 23.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7DCCDBEE279B26A100BF6711 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DCCDBED279B26A100BF6711 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D1E3154279A0537007D80C1 /* Project object */;
 }
