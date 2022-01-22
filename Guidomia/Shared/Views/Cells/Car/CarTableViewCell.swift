@@ -19,6 +19,8 @@ class CarTableViewCell: UITableViewCell {
         let carRating: Double
         let prosList: [String]
         let consList: [String]
+        /// Defines if the item should show the pros&cons list
+        var isExpanded: Bool
     }
     
     @IBOutlet weak var carImageView: UIImageView!
@@ -53,23 +55,30 @@ class CarTableViewCell: UITableViewCell {
         self.carPriceLabel.text = item.carPrice
         self.ratingView.rating = item.carRating
         
-        // Remove all subviews of type BulletPointView of the pros&cons stackviews
-        self.prosStackView.removeArrangedSubviews(where: { $0 is BulletPointView })
-        self.consStackView.removeArrangedSubviews(where: { $0 is BulletPointView })
-        // If a list has no items, then we hide the entire section. Since we're using TableViews, the views will
-        // re-organize correctly to hide the entire section
-        prosStackView.isHidden = item.prosList.isEmpty
-        consStackView.isHidden = item.consList.isEmpty
-        // Create BulletPointViews for each entry in the pros&cons lists, and add them to the stackview
-        self.prosStackView.addArrangedSubviews(views: item.prosList.map({
-            let bulletPointView = BulletPointView()
-            bulletPointView.configure(text: $0)
-            return bulletPointView
-        }))
-        self.consStackView.addArrangedSubviews(views: item.consList.map({
-            let bulletPointView = BulletPointView()
-            bulletPointView.configure(text: $0)
-            return bulletPointView
-        }))
+        self.prosAndConsView.isHidden = !item.isExpanded
+        // Only process the pros&cons list if the item is expanded
+        if item.isExpanded {
+            // Remove all subviews of type BulletPointView of the pros&cons stackviews
+            self.prosStackView.removeArrangedSubviews(where: { $0 is BulletPointView })
+            self.consStackView.removeArrangedSubviews(where: { $0 is BulletPointView })
+            // If a list has no items, then we hide the entire section. Since we're using TableViews, the views will
+            // re-organize correctly to hide the entire section
+            self.prosStackView.isHidden = item.prosList.isEmpty
+            self.consStackView.isHidden = item.consList.isEmpty
+            // Create BulletPointViews for each entry in the pros&cons lists, and add them to the stackview
+            self.prosStackView.addArrangedSubviews(views: item.prosList.map({
+                let bulletPointView = BulletPointView(frame: .zero)
+                bulletPointView.configure(text: $0)
+                return bulletPointView
+            }))
+            self.consStackView.addArrangedSubviews(views: item.consList.map({
+                let bulletPointView = BulletPointView(frame: .zero)
+                bulletPointView.configure(text: $0)
+                return bulletPointView
+            }))
+            
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+        }
     }
 }

@@ -36,13 +36,21 @@ class CarListInteractor {
                         carRating: Double($0.rating),
                         // The JSON data contains empty pros & cons items. Filter these out as well
                         prosList: $0.prosList.filter({ !$0.isEmpty }),
-                        consList: $0.consList.filter({ !$0.isEmpty })
+                        consList: $0.consList.filter({ !$0.isEmpty }),
+                        isExpanded: false
                     )),
                     CarListRow.separator
                 ]
             })
             // Remove the last separator cell as there is no car below it
             carRows.removeLast()
+            // The first item in the list is expanded by default
+            switch carRows.first {
+            case var .car(item):
+                item.isExpanded = true
+                carRows[0] = .car(item: item)
+            default: break
+            }
             
             viewController?.showData(sections: [
                 .init(rows: [
