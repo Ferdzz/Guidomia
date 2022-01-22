@@ -41,6 +41,7 @@ class CarListViewController: UIViewController {
         // Setup tableView
         self.tableView.register(cell: CarListHeaderTableViewCell.self)
         self.tableView.register(cell: CarTableViewCell.self)
+        self.tableView.register(cell: SeparatorTableViewCell.self)
         self.tableView.rowHeight = UITableView.automaticDimension
         // Disable the extra empty rows
         self.tableView.tableFooterView = UIView()
@@ -72,6 +73,8 @@ extension CarListViewController: UITableViewDataSource {
             let cell = tableView.dequeue(cell: CarTableViewCell.self, for: indexPath)
             cell.configure(item: item)
             return cell
+        case .separator:
+            return tableView.dequeue(cell: SeparatorTableViewCell.self, for: indexPath)
         }
     }
 }

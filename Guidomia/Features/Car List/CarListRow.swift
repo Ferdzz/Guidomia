@@ -10,4 +10,5 @@ import Foundation
 enum CarListRow {
     case header(item: CarListHeaderTableViewCell.Item)
     case car(item: CarTableViewCell.Item)
+    case separator
 }

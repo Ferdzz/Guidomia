@@ -30,6 +30,8 @@
 		7DA6D970279B6A54003C0138 /* Alpine_roadster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D96B279B6A54003C0138 /* Alpine_roadster.jpg */; };
 		7DA6D974279B6C02003C0138 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7DA6D973279B6C02003C0138 /* Kingfisher */; };
 		7DA6D976279B6E8C003C0138 /* Tacoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D975279B6E8C003C0138 /* Tacoma.jpg */; };
+		7DA6D97B279C6FB6003C0138 /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6D979279C6FB6003C0138 /* SeparatorTableViewCell.swift */; };
+		7DA6D97C279C6FB6003C0138 /* SeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA6D97A279C6FB6003C0138 /* SeparatorTableViewCell.xib */; };
 		7DCCDBEB279B23AF00BF6711 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */; };
 		7DCCDBEC279B23AF00BF6711 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */; };
 		7DCCDBEF279B26A100BF6711 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 7DCCDBEE279B26A100BF6711 /* Cosmos */; };
@@ -76,6 +78,8 @@
 		7DA6D96A279B6A54003C0138 /* Range_Rover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Range_Rover.jpg; sourceTree = "<group>"; };
 		7DA6D96B279B6A54003C0138 /* Alpine_roadster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alpine_roadster.jpg; sourceTree = "<group>"; };
 		7DA6D975279B6E8C003C0138 /* Tacoma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tacoma.jpg; sourceTree = "<group>"; };
+		7DA6D979279C6FB6003C0138 /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
+		7DA6D97A279C6FB6003C0138 /* SeparatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeparatorTableViewCell.xib; sourceTree = "<group>"; };
 		7DCCDBE9279B23AF00BF6711 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		7DCCDBEA279B23AF00BF6711 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		7DCCDBF1279B30F300BF6711 /* CarsLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsLocalManager.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		7D1E318B279A1F2F007D80C1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7DA6D97D279C6FBA003C0138 /* Separator */,
 				7DCCDBE8279B23A100BF6711 /* Car */,
 				7D1E318C279A1F33007D80C1 /* Car List Header */,
 			);
@@ -225,6 +230,15 @@
 				7DA6D975279B6E8C003C0138 /* Tacoma.jpg */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		7DA6D97D279C6FBA003C0138 /* Separator */ = {
+			isa = PBXGroup;
+			children = (
+				7DA6D979279C6FB6003C0138 /* SeparatorTableViewCell.swift */,
+				7DA6D97A279C6FB6003C0138 /* SeparatorTableViewCell.xib */,
+			);
+			path = Separator;
 			sourceTree = "<group>";
 		};
 		7DCCDBE8279B23A100BF6711 /* Car */ = {
@@ -385,6 +399,7 @@
 				7D1E3190279A1F50007D80C1 /* CarListHeaderTableViewCell.xib in Resources */,
 				7D1E317B279A080C007D80C1 /* CarListViewController.xib in Resources */,
 				7D1E318A279A1E6C007D80C1 /* car_list.json in Resources */,
+				7DA6D97C279C6FB6003C0138 /* SeparatorTableViewCell.xib in Resources */,
 				7DA6D976279B6E8C003C0138 /* Tacoma.jpg in Resources */,
 				7DA6D96D279B6A54003C0138 /* BMW_330i.jpg in Resources */,
 				7DA6D96F279B6A54003C0138 /* Range_Rover.jpg in Resources */,
@@ -406,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA6D97B279C6FB6003C0138 /* SeparatorTableViewCell.swift in Sources */,
 				7D1E3193279A2193007D80C1 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				7DA6D959279B3B02003C0138 /* CarsManagerProtocol.swift in Sources */,
 				7DCCDBF2279B30F300BF6711 /* CarsLocalManager.swift in Sources */,

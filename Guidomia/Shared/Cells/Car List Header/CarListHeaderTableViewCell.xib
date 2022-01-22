@@ -42,7 +42,7 @@
                     <constraint firstItem="VRr-AU-WDb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="KKQ-xr-YvZ"/>
                     <constraint firstAttribute="trailing" secondItem="36i-DP-fno" secondAttribute="trailing" id="Kt5-Zi-Sne"/>
                     <constraint firstAttribute="trailingMargin" secondItem="VRr-AU-WDb" secondAttribute="trailing" id="MuS-LU-z70"/>
-                    <constraint firstAttribute="bottom" secondItem="36i-DP-fno" secondAttribute="bottom" id="Ov7-gM-5vq"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="36i-DP-fno" secondAttribute="bottom" id="Ov7-gM-5vq"/>
                     <constraint firstItem="VRr-AU-WDb" firstAttribute="top" secondItem="h8D-sX-UXV" secondAttribute="bottom" id="esv-KZ-TBC"/>
                     <constraint firstItem="36i-DP-fno" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="i0v-wQ-IqI"/>
                     <constraint firstItem="h8D-sX-UXV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qrz-1b-7TA"/>
@@ -59,6 +59,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Tacoma" width="5472" height="3648"/>
+        <image name="Tacoma" width="1280" height="853"/>
     </resources>
 </document>
