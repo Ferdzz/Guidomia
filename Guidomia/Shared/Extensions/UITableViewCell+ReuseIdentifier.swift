@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-extension UITableViewCell {
+extension UIView {
     
-    static func reuseIdentifier() -> String {
+    /// Returns the name of the nib associated to this UIView type
+    static func nibName() -> String {
         return String(describing: self)
     }
 }

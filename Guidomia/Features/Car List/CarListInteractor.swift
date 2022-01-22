@@ -33,7 +33,11 @@ class CarListInteractor {
                         // Formatting using a divided string could be improved by moving to an extension supporting
                         // millions and billions as well
                         carPrice: String(format: NSLocalizedString("CarList.Price", comment: ""), Int($0.customerPrice / 1000)),
-                        carRating: Double($0.rating))),
+                        carRating: Double($0.rating),
+                        // The JSON data contains empty pros & cons items. Filter these out as well
+                        prosList: $0.prosList.filter({ !$0.isEmpty }),
+                        consList: $0.consList.filter({ !$0.isEmpty })
+                    )),
                     CarListRow.separator
                 ]
             })
