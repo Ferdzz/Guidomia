@@ -25,7 +25,7 @@ class BulletPointView: UIView {
     
     private func commonInit() {
         // Load the design elements from the Xib file
-        Bundle.main.loadNibNamed("BulletPointView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(Self.nibName(), owner: self, options: nil)
         // Make sure the contentView is displayed & expands to fill the space
         self.addSubview(contentView)
         self.contentView.frame = self.bounds

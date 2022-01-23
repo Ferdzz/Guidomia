@@ -14,3 +14,6 @@
 "CarList.Price" = "Price : %dK";
 "CarList.Pros" = "Pros :";
 "CarList.Cons" = "Cons :";
+"CarList.Filter" = "Filters";
+"CarList.Filter.Make" = "Any make";
+"CarList.Filter.Model" = "Any model";

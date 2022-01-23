@@ -21,6 +21,7 @@ class CarListInteractor {
     }
     
     private func fetchData() async {
+        // TODO: This should present a loading indicator
         let result = await self.carsStore.getCars()
         switch result {
         case let .success(cars):
@@ -59,6 +60,7 @@ class CarListInteractor {
                         title: "Tacoma 2021",
                         subtitle: NSLocalizedString("CarList.Header.CallToAction", comment: "")))
                 ]),
+                .init(rows: [.filter]),
                 .init(rows: carRows)
             ])
         case let .failure(error):
@@ -77,6 +79,7 @@ extension CarListInteractor: CarListInteractorProtocol {
                 subtitle: NSLocalizedString("CarList.Header.CallToAction", comment: "")))
         ])])
         
+        // Request the data asynchronously
         Task {
             await self.fetchData()
         }

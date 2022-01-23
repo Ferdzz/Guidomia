@@ -26,6 +26,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="voV-86-sts" secondAttribute="trailing" constant="24" id="8uf-SF-kBE"/>
                     <constraint firstItem="voV-86-sts" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13.5" id="HyL-as-cN6"/>

@@ -44,6 +44,7 @@ class CarListViewController: UIViewController {
         self.tableView.register(cell: CarListHeaderTableViewCell.self)
         self.tableView.register(cell: CarTableViewCell.self)
         self.tableView.register(cell: SeparatorTableViewCell.self)
+        self.tableView.register(cell: FilterTableViewCell.self)
         self.tableView.rowHeight = UITableView.automaticDimension
         // Disable the extra empty rows
         self.tableView.tableFooterView = UIView()
@@ -69,8 +70,12 @@ extension CarListViewController: UITableViewDataSource {
         // Configure the cell with the provided item
         switch row {
         case let .header(item: item):
-            let cell = self.tableView.dequeue(cell: CarListHeaderTableViewCell.self, for: indexPath)
+            let cell = tableView.dequeue(cell: CarListHeaderTableViewCell.self, for: indexPath)
             cell.configure(item: item)
+            return cell
+        case .filter:
+            let cell = tableView.dequeue(cell: FilterTableViewCell.self, for: indexPath)
+            // TODO: This needs to be configured using the selected data
             return cell
         case let .car(item):
             let cell = tableView.dequeue(cell: CarTableViewCell.self, for: indexPath)
@@ -116,7 +121,8 @@ extension CarListViewController: CarListViewControllerProtocol {
         // Reload the TableView data on the UI thread
         DispatchQueue.main.async {
             self.sections = sections
-            self.expandedIndexPath = IndexPath(row: 0, section: 1)
+            // TODO: This could be provided by the interactor
+            self.expandedIndexPath = IndexPath(row: 0, section: 2)
             self.tableView.reloadData()
         }
     }

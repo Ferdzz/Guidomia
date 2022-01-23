@@ -35,6 +35,7 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var consLabel: UILabel!
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         self.prosLabel.text = NSLocalizedString("CarList.Pros", comment: "")
         self.consLabel.text = NSLocalizedString("CarList.Cons", comment: "")
     }
