@@ -11,7 +11,6 @@ import Kingfisher
 
 class CarTableViewCell: UITableViewCell {
 
-    // TODO: Items should be ViewModels and responsible for transforming API data into FE data
     struct Item {
         let carImage: String
         let carName: String

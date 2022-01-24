@@ -28,15 +28,17 @@ class CarListInteractor {
     
     /// Fetches the list of cars and orders the view to display the results
     private func fetchData() async {
-        // TODO: This should present a loading indicator
+        self.viewController?.showLoading()
         let result = await self.carsStore.getCars()
+        // Uncomment this line to display the loading indicator:
+        // try! await Task.sleep(nanoseconds: 4000000000)
+        self.viewController?.hideLoading()
         switch result {
         case let .success(cars):
             self.cars = cars
             self.showData(cars: cars)
         case let .failure(error):
-            // TODO: Show error
-            break
+            self.viewController?.showError(error: error)
         }
     }
     

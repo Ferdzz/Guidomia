@@ -9,11 +9,18 @@ import UIKit
 
 protocol CarListViewControllerProtocol: AnyObject {
     func showData(sections: [Section<CarListRow>])
+    func showLoading()
+    func hideLoading()
+    func showError(error: Error)
 }
 
 class CarListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     /// Contains the list of all rows, divided in sections
     private var sections: [Section<CarListRow>] = []
@@ -154,9 +161,30 @@ extension CarListViewController: CarListViewControllerProtocol {
         // Reload the TableView data on the UI thread
         DispatchQueue.main.async {
             self.sections = sections
-            // TODO: This IndexPath could be provided by the interactor
+            // TODO: Future improvement: This IndexPath could be provided by the interactor
             self.expandedIndexPath = IndexPath(row: 0, section: 2)
             self.tableView.reloadData()
+        }
+    }
+    
+    func showLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = false
+            self.loadingIndicator.startAnimating()
+        }
+    }
+    
+    func hideLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+            self.loadingIndicator.stopAnimating()
+        }
+    }
+    
+    func showError(error: Error) {
+        DispatchQueue.main.async {
+            self.errorView.isHidden = false
+            self.errorLabel.text = error.localizedDescription            
         }
     }
 }

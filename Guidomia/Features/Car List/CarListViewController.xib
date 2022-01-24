@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarListViewController" customModule="Guidomia" customModuleProvider="target">
             <connections>
+                <outlet property="errorLabel" destination="TPR-ow-pbd" id="f73-uu-owc"/>
+                <outlet property="errorView" destination="T0K-4c-EWf" id="y6c-HU-JrL"/>
+                <outlet property="loadingIndicator" destination="ZE1-mp-Rbi" id="6zR-Dd-asU"/>
+                <outlet property="loadingView" destination="xiQ-7C-Xgr" id="nED-9f-3gH"/>
                 <outlet property="tableView" destination="4ft-w8-6zk" id="rWb-ye-kKa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,19 +32,69 @@
                         <outlet property="delegate" destination="-1" id="Z5Y-6E-aZw"/>
                     </connections>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiQ-7C-Xgr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZE1-mp-Rbi">
+                            <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading cars, please wait" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYI-lD-Aqb">
+                            <rect key="frame" x="106" y="388.5" width="202" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Dark Gray"/>
+                    <constraints>
+                        <constraint firstItem="ZE1-mp-Rbi" firstAttribute="centerX" secondItem="xiQ-7C-Xgr" secondAttribute="centerX" id="Md9-c8-his"/>
+                        <constraint firstItem="ZE1-mp-Rbi" firstAttribute="centerY" secondItem="xiQ-7C-Xgr" secondAttribute="centerY" id="POb-C2-VAO"/>
+                        <constraint firstItem="CYI-lD-Aqb" firstAttribute="centerX" secondItem="xiQ-7C-Xgr" secondAttribute="centerX" id="ZqE-mh-xci"/>
+                        <constraint firstItem="ZE1-mp-Rbi" firstAttribute="top" secondItem="CYI-lD-Aqb" secondAttribute="bottom" constant="20" id="cSY-SC-A2r"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0K-4c-EWf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error occured, please try again at a later time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPR-ow-pbd">
+                            <rect key="frame" x="16" y="426.5" width="382" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="Dark Gray"/>
+                    <constraints>
+                        <constraint firstItem="TPR-ow-pbd" firstAttribute="centerY" secondItem="T0K-4c-EWf" secondAttribute="centerY" id="4Kf-wN-QGc"/>
+                        <constraint firstAttribute="trailing" secondItem="TPR-ow-pbd" secondAttribute="trailing" constant="16" id="G3l-bI-Pc6"/>
+                        <constraint firstItem="TPR-ow-pbd" firstAttribute="leading" secondItem="T0K-4c-EWf" secondAttribute="leading" constant="16" id="hXR-AG-fjt"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4ft-w8-6zk" secondAttribute="trailing" id="2YY-Gb-ssq"/>
+                <constraint firstItem="T0K-4c-EWf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6D7-of-hd8"/>
+                <constraint firstItem="T0K-4c-EWf" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="9RL-Of-CSX"/>
+                <constraint firstAttribute="trailing" secondItem="xiQ-7C-Xgr" secondAttribute="trailing" id="JIR-XP-nTs"/>
                 <constraint firstItem="4ft-w8-6zk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZvI-BU-d7T"/>
                 <constraint firstItem="4ft-w8-6zk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bSf-XG-uE0"/>
+                <constraint firstItem="T0K-4c-EWf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cuQ-yj-7jN"/>
                 <constraint firstAttribute="bottom" secondItem="4ft-w8-6zk" secondAttribute="bottom" id="jRC-8S-0y3"/>
+                <constraint firstAttribute="bottom" secondItem="xiQ-7C-Xgr" secondAttribute="bottom" id="qKb-bC-E3U"/>
+                <constraint firstItem="xiQ-7C-Xgr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tjB-e8-lNK"/>
+                <constraint firstItem="xiQ-7C-Xgr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tmB-lY-qrR"/>
+                <constraint firstAttribute="bottom" secondItem="T0K-4c-EWf" secondAttribute="bottom" id="yj6-OS-6NF"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="Dark Gray">
+            <color red="0.5220000147819519" green="0.5220000147819519" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Light Gray">
             <color red="0.83499997854232788" green="0.83499997854232788" blue="0.83499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
