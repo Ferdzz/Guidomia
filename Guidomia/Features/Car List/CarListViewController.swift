@@ -49,7 +49,31 @@ class CarListViewController: UIViewController {
         // Disable the extra empty rows
         self.tableView.tableFooterView = UIView()
         
+        // Register to keyboard events so that we may properly handle tableview offsets
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow(notification:)),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide(notification:)),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
+        
         self.interactor.onViewDidLoad()
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        // Add an inset to the tableview when the keyboard is shown so that nothing is hidden behind
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        }
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        // Remove the inset when the keyboard is hidden
+        tableView.contentInset = .zero
     }
 }
 
@@ -64,18 +88,18 @@ extension CarListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Get the row configuration for this indexpath
+        // Get the row configuration for this IndexPath
         let row = self.sections[indexPath.section].rows[indexPath.row]
         
         // Configure the cell with the provided item
         switch row {
-        case let .header(item: item):
+        case let .header(item):
             let cell = tableView.dequeue(cell: CarListHeaderTableViewCell.self, for: indexPath)
             cell.configure(item: item)
             return cell
-        case .filter:
+        case let .filter(item):
             let cell = tableView.dequeue(cell: FilterTableViewCell.self, for: indexPath)
-            // TODO: This needs to be configured using the selected data
+            cell.configure(item: item, delegate: self)
             return cell
         case let .car(item):
             let cell = tableView.dequeue(cell: CarTableViewCell.self, for: indexPath)
@@ -115,13 +139,22 @@ extension CarListViewController: UITableViewDelegate {
     }
 }
 
-extension CarListViewController: CarListViewControllerProtocol {
+extension CarListViewController: FilterTableViewCellDelegate {
+    func didSelectMake(value: String?) {
+        interactor.didSelectMake(value: value)
+    }
     
+    func didSelectModel(value: String?) {
+        interactor.didSelectModel(value: value)
+    }
+}
+
+extension CarListViewController: CarListViewControllerProtocol {
     func showData(sections: [Section<CarListRow>]) {
         // Reload the TableView data on the UI thread
         DispatchQueue.main.async {
             self.sections = sections
-            // TODO: This could be provided by the interactor
+            // TODO: This IndexPath could be provided by the interactor
             self.expandedIndexPath = IndexPath(row: 0, section: 2)
             self.tableView.reloadData()
         }

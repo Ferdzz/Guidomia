@@ -9,7 +9,7 @@ import UIKit
 
 enum CarListRow {
     case header(item: CarListHeaderTableViewCell.Item)
-    case filter
+    case filter(item: FilterTableViewCell.Item)
     case car(item: CarTableViewCell.Item)
     case separator
 }
@@ -23,8 +23,10 @@ final class CarListRowFactory {
             subtitle: NSLocalizedString("CarList.Header.CallToAction", comment: "")))
     }
     
-    static func makeFilter() -> CarListRow {
-        return .filter
+    static func makeFilter(cars: [Car]) -> CarListRow {
+        return .filter(item: .init(
+            makes: [NSLocalizedString("CarList.Filter.Make", comment: "")] + cars.map({ $0.make }),
+            models: [NSLocalizedString("CarList.Filter.Model", comment: "")] + cars.map({ $0.model })))
     }
 
     static func makeCars(cars: [Car]) -> [CarListRow] {
@@ -33,7 +35,9 @@ final class CarListRowFactory {
             [self.makeCar(car: $0), self.makeSeparator()]
         })
         // Remove the last separator cell as there is no car below it
-        carRows.removeLast()
+        if !carRows.isEmpty {
+            carRows.removeLast()            
+        }
         // The first item in the list is expanded by default
         switch carRows.first {
         case var .car(item):

@@ -176,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				7DA6D963279B5831003C0138 /* CarListRow.swift */,
-				7D1E3178279A080C007D80C1 /* CarListViewController.swift */,
 				7DA6D965279B5BB7003C0138 /* CarListInteractor.swift */,
+				7D1E3178279A080C007D80C1 /* CarListViewController.swift */,
 				7D1E3179279A080C007D80C1 /* CarListViewController.xib */,
 			);
 			path = "Car List";
