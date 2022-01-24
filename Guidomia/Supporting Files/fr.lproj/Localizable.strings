@@ -5,3 +5,15 @@
   Created by Frederic Deschenes on 2022-01-20.
   
 */
+
+"App.Name" = "Guidomia";
+
+"Error.CannotLoadCars" = "Nous n'avons pas pu charger la liste des voitures. Veuillez réessayer plus tard.";
+
+"CarList.Header.CallToAction" = "Obtenez le vôtre maintenant";
+"CarList.Price" = "Prix : %dK";
+"CarList.Pros" = "Avantages :";
+"CarList.Cons" = "Inconvénients :";
+"CarList.Filter" = "Filtres";
+"CarList.Filter.Make" = "Toutes les marques";
+"CarList.Filter.Model" = "Tous les modèles";
