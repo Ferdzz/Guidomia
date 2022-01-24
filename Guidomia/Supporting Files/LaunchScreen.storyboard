@@ -16,16 +16,40 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting up Guidomia..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f56-fU-cBJ">
+                                <rect key="frame" x="16" y="457" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tacoma" translatesAutoresizingMaskIntoConstraints="NO" id="57e-mg-tr9">
+                                <rect key="frame" x="0.0" y="104" width="414" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="Itk-XD-7rF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f56-fU-cBJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="81u-8A-y1N"/>
+                            <constraint firstItem="57e-mg-tr9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Am4-1e-sKi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f56-fU-cBJ" secondAttribute="trailing" constant="16" id="ILE-Iq-aS6"/>
+                            <constraint firstItem="f56-fU-cBJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vji-HC-pTJ"/>
+                            <constraint firstItem="57e-mg-tr9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qm9-3c-fWn"/>
+                            <constraint firstItem="57e-mg-tr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="u8g-YS-L30"/>
+                            <constraint firstItem="f56-fU-cBJ" firstAttribute="top" secondItem="57e-mg-tr9" secondAttribute="bottom" constant="73" id="yge-ny-KVY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Tacoma" width="1280" height="853"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
